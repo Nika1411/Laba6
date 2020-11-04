@@ -10,7 +10,7 @@
 
 if __name__ == '__main__':
     A = list(map(float, input("Ввод:" ).split()))
-    res=0
+    res = 0
 # 1)
     for i in A:
         if i > 0:
@@ -18,16 +18,15 @@ if __name__ == '__main__':
     print("1)""%.2f" % res)
 
 # 2)
-    from functools import reduce
     L = []
     a_min = a_max = A[0]
     i_min = i_max = 0
     b = [abs(i) for i in A]
     for i, item in enumerate(b):
         if item < a_min:
-            i_min, a_min = (i), item
+            i_min, a_min = i, item
         if item >= a_max:
-            i_max, a_max = (i), item
+            i_max, a_max = i, item
     A_new = A[i_min:i_max+1]
     res = 1
     for j in A_new:
